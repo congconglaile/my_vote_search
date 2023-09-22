@@ -129,7 +129,7 @@ def generate_prompt(related_docs: List[str],
                 source_documents.append(doc)
             # source_documents += f"""<br>{ref_number}. <a href='http://localhost:5000/display_video?video_file={video_file}&start_ts={start_ts}' target='_blank'>{video_file}</a>: {ref_text}(timestamp: {str(start_td)})"""
     prompt = prompt_template.replace("{question}", query).replace(f"{context}", context)
-    return prompt, source_documents[0]
+    return prompt, source_documents[:1]
 
 
 @app.route('/candidate', methods=['GET'])
