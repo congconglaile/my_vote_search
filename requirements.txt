@@ -1,0 +1,4 @@
+flask
+langchain==0.0.174
+sentence_transformers
+faiss-cpu==1.7.4
